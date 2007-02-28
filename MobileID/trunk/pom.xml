@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>mobileid</groupId>
+    <groupId>de.berlios.mobileid</groupId>
     <artifactId>mobileid-project</artifactId>
     <packaging>pom</packaging>
     <version>0.1-SNAPSHOT</version>
@@ -37,6 +37,71 @@
             <timezone>0</timezone>
         </developer>
     </developers>
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>dependencies</report>
+                            <report>cim</report>
+                            <report>license</report>
+                            <report>scm</report>
+                            <report>project-team</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+            </plugin>
+            <!--
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-javadoc-plugin</artifactId>
+              <configuration>
+                <minmemory>128m</minmemory>
+                <maxmemory>512</maxmemory>
+              </configuration>
+            </plugin>
+            -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <configuration>
+                    <!-- <configLocation>checkstyle.xml</configLocation> -->
+                    <!-- <suppressionsLocation>checkstyle-suppressions.xml</suppressionsLocation> -->
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <configuration>
+                    <rulesets>
+
+                    </rulesets>
+                    <sourceEncoding>utf-8</sourceEncoding>
+                    <minimumTokens>100</minimumTokens>
+                    <targetJdk>1.6</targetJdk>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+    <distributionManagement>
+        <downloadUrl>http://mobileid.berlios.de/download/</downloadUrl>
+        <site>
+            <id>net.transformatorhuis.mobileid</id>
+            <url>scp://shell.berlios.de/home/groups/mobileid/htdocs/</url>
+            <name>MobileID</name>
+        </site>
+    </distributionManagement>
     <scm>
         <connection>
             scm:svn:http://svn.berlios.de/svnroot/repos/mobileid/MobileID/trunk/

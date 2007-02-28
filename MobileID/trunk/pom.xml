@@ -97,7 +97,7 @@
     <distributionManagement>
         <downloadUrl>http://mobileid.berlios.de/download/</downloadUrl>
         <site>
-            <id>net.transformatorhuis.mobileid</id>
+            <id>de.berlios.mobileid</id>
             <url>scp://shell.berlios.de/home/groups/mobileid/htdocs/</url>
             <name>MobileID</name>
         </site>

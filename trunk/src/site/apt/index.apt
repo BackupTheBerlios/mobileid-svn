@@ -1,0 +1,5 @@
+Summary
+
+ MobileID is an client server application which supports the so called two-factor authentication.
+ The client application generates a token based on time and a private key. This token is then used
+ together with a password and a personal identification number to authenticate against the server.

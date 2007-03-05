@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Maven">
+    <bannerLeft>
+        <name>MobileID</name>
+        <src>http://dragon3d.berlios.de/images/dragon3d.png</src>
+        <href>http://dragon3d.berlios.de/</href>
+    </bannerLeft>
+    <bannerRight>
+        <src>http://dragon3d.berlios.de/images/logodragon3d.png</src>
+    </bannerRight>
+    <body>
+        <links>
+            <item name="Maven 2" href="http://maven.apache.org/maven2/"/>
+        </links>
+
+        <menu name="MobileID">
+            <item name="Introduction" href="index.html"/>
+            <item name="Project" href="http://developer.berlios.de/projects/mobileid/" />
+            <item name="Version Control" href="http://svn.berlios.de/wsvn/mobileid" />
+            <item name="Wiki" href="http://mobileid.berlios.de/mediawiki/index.php/Main_Page" />
+        </menu>
+
+        ${reports}
+
+    </body>
+</project>

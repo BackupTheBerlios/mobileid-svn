@@ -10,6 +10,7 @@
             <item name="Project" href="http://developer.berlios.de/projects/mobileid/" />
             <item name="Version Control" href="http://svn.berlios.de/wsvn/mobileid" />
             <item name="Wiki" href="http://mobileid.berlios.de/mediawiki/index.php/Main_Page" />
+            <item name="Blog" href="http://mobileid.blogspot.com/" />
         </menu>
 
         ${reports}

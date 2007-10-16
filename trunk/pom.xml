@@ -34,7 +34,7 @@
                 <role>Core Developer</role>
             </roles>
             <email>valionis@gmail.com</email>
-            <timezone>0</timezone>
+            <timezone>-8</timezone>
         </developer>
     </developers>
     <ciManagement>

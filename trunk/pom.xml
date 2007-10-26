@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.berlios.mobileid</groupId>
     <artifactId>mobileid-project</artifactId>
@@ -36,17 +36,21 @@
             <email>valionis@gmail.com</email>
             <timezone>-8</timezone>
         </developer>
+        <developer>
+            <name>Jesse Tijnagel</name>
+            <id>transformer</id>
+        </developer>
     </developers>
     <ciManagement>
-      <system>Continuum</system>
-      <url>http://www.cyberroadie.org/continuum/</url>
-      <notifiers>
-         <notifier>
-            <type>mail</type>
-            <address>cyberroadie@gmail.com</address>
-         </notifier>
-      </notifiers>
-   </ciManagement>
+        <system>Continuum</system>
+        <url>http://www.cyberroadie.org/continuum/</url>
+        <notifiers>
+            <notifier>
+                <type>mail</type>
+                <address>cyberroadie@gmail.com</address>
+            </notifier>
+        </notifiers>
+    </ciManagement>
     <reporting>
         <plugins>
             <plugin>
@@ -99,7 +103,7 @@
                     </rulesets>
                     <sourceEncoding>utf-8</sourceEncoding>
                     <minimumTokens>100</minimumTokens>
-                    <targetJdk>1.6</targetJdk>
+                    <targetJdk>1.5</targetJdk>
                 </configuration>
             </plugin>
         </plugins>
@@ -125,7 +129,25 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.0</version>
+            <version>4.4</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jmock</groupId>
+            <artifactId>jmock</artifactId>
+            <version>2.3.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jmock</groupId>
+            <artifactId>jmock-junit4</artifactId>
+            <version>2.3.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-library</artifactId>
+            <version>1.1</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -142,14 +164,6 @@
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-idea-plugin</artifactId>
-                    <configuration>
-                        <downloadSources>true</downloadSources>
-                        <downloadJavadocs>true</downloadJavadocs>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-eclipse-plugin</artifactId>
                     <configuration>
                         <downloadSources>true</downloadSources>
@@ -158,5 +172,7 @@
             </plugins>
         </pluginManagement>
     </build>
-
+  <modules>
+    <module>mobileid-iphone</module>
+  </modules>
 </project>
